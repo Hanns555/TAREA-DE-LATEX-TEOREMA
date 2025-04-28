@@ -1,0 +1,82 @@
+\documentclass{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm}
+% Configuración del tema
+\usetheme{Madrid} % Puedes cambiar el tema si lo deseas
+\usecolortheme{default}
+% Información de la presentación
+\title{Teorema}
+\author{Hanns Silva}
+\institute{UMSA}
+\date{Abril 2025}
+
+\begin{document}
+
+% Diapositiva de título
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Diapositiva de contenido
+\begin{frame}{Contenido}
+    \tableofcontents
+\end{frame}
+
+% Sección: Regla del Producto
+\section{Regla del Producto}
+
+% Diapositiva con el Teorema
+\begin{frame}{Regla del Producto - Teorema}
+    Sean $f$ y $g$ funciones derivables en $x_0$. La derivada del producto de dichas funciones es:
+    \[
+    (fg)'(x_0) = g(x_0)f'(x_0) + f(x_0)g'(x_0)
+    \]
+    \pause
+    \begin{block}{Teorema}
+        La derivada del producto de dos funciones derivables es igual a la suma de:
+        
+            
+- El producto de la derivada de la primera función por la segunda función.
+            
+- El producto de la primera función por la derivada de la segunda función.
+        
+    \end{block}
+\end{frame}
+
+% Diapositiva con la Demostración
+\begin{frame}{Demostración}
+    Partimos de la definición de derivada:
+    \[
+    \frac{(fg)(x_0+h)-(fg)(x_0)}{h} = \frac{f(x_0+h)g(x_0+h)-f(x_0)g(x_0)}{h}
+    \]
+    \pause
+    Súmele y réstese $g(x_0)f(x_0+h)$ en el numerador:
+    \[
+    = \frac{f(x_0+h)[g(x_0+h)-g(x_0)]}{h} + \frac{g(x_0)[f(x_0+h)-f(x_0)]}{h}
+    \]
+    \pause
+    Tomando el límite cuando $h \to 0$:
+    \[
+    \lim_{h \to 0} \left( \frac{f(x_0+h)[g(x_0+h)-g(x_0)]}{h} + \frac{g(x_0)[f(x_0+h)-f(x_0)]}{h} \right)
+    \]
+    \pause
+    Como $f$ y $g$ son derivables, se obtiene:
+    \[
+    (fg)'(x_0) = g(x_0)f'(x_0) + f(x_0)g'(x_0)
+    \]
+    \qed
+\end{frame}
+
+% Diapositiva de Conclusión
+\begin{frame}{Conclusión}
+    \begin{block}{Resumen}
+        La regla del producto establece que:
+        \[
+        (fg)'(x_0) = g(x_0)f'(x_0) + f(x_0)g'(x_0)
+        \]
+        Esta regla es fundamental en cálculo diferencial y se utiliza ampliamente en aplicaciones prácticas.
+    \end{block}
+\end{frame}
+
+\end{document}
